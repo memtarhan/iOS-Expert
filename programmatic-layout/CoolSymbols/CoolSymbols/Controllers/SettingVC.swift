@@ -3,14 +3,22 @@
 import UIKit
 
 class SettingVC: UIViewController {
-  @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
+    private var settingsView: SettingsView {
+        if let castedView = view as? SettingsView {
+            return castedView
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    sortSegmentedControl.selectedSegmentIndex = SortOrder.current.segmentIndex
-  }
+        } else {
+            fatalError(fatalCastMessage(view: SettingsView.self))
+        }
+    }
 
-  @IBAction func sortOrderChanged() {
-    SortOrder.current = SortOrder.sortOrderForIndex(sortSegmentedControl.selectedSegmentIndex)
-  }
+    override func loadView() {
+        view = SettingsView(frame: UIScreen.main.bounds)
+        settingsView.sortSegmentedControl.addTarget(self, action: #selector(SettingVC.sortOrderChanged(_:)), for: .valueChanged)
+        settingsView.sortSegmentedControl.selectedSegmentIndex = SortOrder.current.segmentIndex
+    }
+
+    @objc func sortOrderChanged(_ sender: UISegmentedControl) {
+        SortOrder.current = SortOrder.sortOrderForIndex(settingsView.sortSegmentedControl.selectedSegmentIndex)
+    }
 }

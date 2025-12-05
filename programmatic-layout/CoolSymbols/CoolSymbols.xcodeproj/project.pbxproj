@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		037DE5012ABBFE7D00EBB7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037DE4FF2ABBFE7D00EBB7DB /* Main.storyboard */; };
 		037DE5032ABBFE7E00EBB7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 037DE5022ABBFE7E00EBB7DB /* Assets.xcassets */; };
 		037DE5062ABBFE7E00EBB7DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037DE5042ABBFE7E00EBB7DB /* LaunchScreen.storyboard */; };
 		037DE5142ABBFF7600EBB7DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DE5122ABBFF7600EBB7DB /* SceneDelegate.swift */; };
@@ -17,16 +16,20 @@
 		037DE51B2ABBFFDE00EBB7DB /* SymbolDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DE5182ABBFFDE00EBB7DB /* SymbolDetailVC.swift */; };
 		037DE51E2ABC001300EBB7DB /* SortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DE51C2ABC001300EBB7DB /* SortOrder.swift */; };
 		037DE51F2ABC001300EBB7DB /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DE51D2ABC001300EBB7DB /* Symbol.swift */; };
-		037DE5222ABC002C00EBB7DB /* SymbolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037DE5202ABC002C00EBB7DB /* SymbolCell.xib */; };
 		037DE5232ABC002C00EBB7DB /* SymbolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DE5212ABC002C00EBB7DB /* SymbolCell.swift */; };
 		DB476D982EE1A53700BF78EE /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB476D972EE1A53100BF78EE /* MainTabBarVC.swift */; };
 		DB476D9A2EE1A73100BF78EE /* BrowseSymbolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB476D992EE1A72B00BF78EE /* BrowseSymbolsView.swift */; };
 		DB476D9C2EE1AEBC00BF78EE /* SymbolDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB476D9B2EE1AEB300BF78EE /* SymbolDetailView.swift */; };
+		DBC5F4DD2EE2C971006145E2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC5F4DC2EE2C96D006145E2 /* SettingsView.swift */; };
+		DBC5F4E02EE2CCE7006145E2 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC5F4DF2EE2CCE0006145E2 /* UIViewController.swift */; };
+		DBC5F4E22EE2CD9A006145E2 /* NSCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC5F4E12EE2CD97006145E2 /* NSCoder.swift */; };
+		DBC5F4E42EE2CE69006145E2 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC5F4E32EE2CE67006145E2 /* Layout.swift */; };
+		DBC5F4E62EE2CF6B006145E2 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC5F4E52EE2CF66006145E2 /* NSLayoutConstraint.swift */; };
+		DBC5F4E82EE2D042006145E2 /* UsesAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC5F4E72EE2D03E006145E2 /* UsesAutoLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		037DE4F62ABBFE7D00EBB7DB /* CoolSymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolSymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		037DE5002ABBFE7D00EBB7DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		037DE5022ABBFE7E00EBB7DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		037DE5052ABBFE7E00EBB7DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		037DE5072ABBFE7E00EBB7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,11 +40,16 @@
 		037DE5182ABBFFDE00EBB7DB /* SymbolDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolDetailVC.swift; sourceTree = "<group>"; };
 		037DE51C2ABC001300EBB7DB /* SortOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortOrder.swift; sourceTree = "<group>"; };
 		037DE51D2ABC001300EBB7DB /* Symbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
-		037DE5202ABC002C00EBB7DB /* SymbolCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SymbolCell.xib; sourceTree = "<group>"; };
 		037DE5212ABC002C00EBB7DB /* SymbolCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolCell.swift; sourceTree = "<group>"; };
 		DB476D972EE1A53100BF78EE /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
 		DB476D992EE1A72B00BF78EE /* BrowseSymbolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseSymbolsView.swift; sourceTree = "<group>"; };
 		DB476D9B2EE1AEB300BF78EE /* SymbolDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolDetailView.swift; sourceTree = "<group>"; };
+		DBC5F4DC2EE2C96D006145E2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DBC5F4DF2EE2CCE0006145E2 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		DBC5F4E12EE2CD97006145E2 /* NSCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCoder.swift; sourceTree = "<group>"; };
+		DBC5F4E32EE2CE67006145E2 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		DBC5F4E52EE2CF66006145E2 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
+		DBC5F4E72EE2D03E006145E2 /* UsesAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesAutoLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 		037DE4F82ABBFE7D00EBB7DB /* CoolSymbols */ = {
 			isa = PBXGroup;
 			children = (
+				DBC5F4DE2EE2CCDB006145E2 /* Helpers */,
 				037DE5112ABBFECD00EBB7DB /* Assets */,
 				037DE5102ABBFEC700EBB7DB /* Controllers */,
 				037DE50F2ABBFEC100EBB7DB /* Delegates */,
@@ -87,10 +96,10 @@
 		037DE50D2ABBFEB600EBB7DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DBC5F4DC2EE2C96D006145E2 /* SettingsView.swift */,
 				DB476D9B2EE1AEB300BF78EE /* SymbolDetailView.swift */,
 				DB476D992EE1A72B00BF78EE /* BrowseSymbolsView.swift */,
 				037DE5212ABC002C00EBB7DB /* SymbolCell.swift */,
-				037DE5202ABC002C00EBB7DB /* SymbolCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,9 +138,20 @@
 			children = (
 				037DE5022ABBFE7E00EBB7DB /* Assets.xcassets */,
 				037DE5042ABBFE7E00EBB7DB /* LaunchScreen.storyboard */,
-				037DE4FF2ABBFE7D00EBB7DB /* Main.storyboard */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		DBC5F4DE2EE2CCDB006145E2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DBC5F4E72EE2D03E006145E2 /* UsesAutoLayout.swift */,
+				DBC5F4E52EE2CF66006145E2 /* NSLayoutConstraint.swift */,
+				DBC5F4E32EE2CE67006145E2 /* Layout.swift */,
+				DBC5F4E12EE2CD97006145E2 /* NSCoder.swift */,
+				DBC5F4DF2EE2CCE0006145E2 /* UIViewController.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,9 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				037DE5062ABBFE7E00EBB7DB /* LaunchScreen.storyboard in Resources */,
-				037DE5222ABC002C00EBB7DB /* SymbolCell.xib in Resources */,
 				037DE5032ABBFE7E00EBB7DB /* Assets.xcassets in Resources */,
-				037DE5012ABBFE7D00EBB7DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,13 +227,19 @@
 			files = (
 				037DE5192ABBFFDE00EBB7DB /* BrowseSymbolsVC.swift in Sources */,
 				DB476D9C2EE1AEBC00BF78EE /* SymbolDetailView.swift in Sources */,
+				DBC5F4E42EE2CE69006145E2 /* Layout.swift in Sources */,
+				DBC5F4E22EE2CD9A006145E2 /* NSCoder.swift in Sources */,
 				037DE5232ABC002C00EBB7DB /* SymbolCell.swift in Sources */,
 				037DE51B2ABBFFDE00EBB7DB /* SymbolDetailVC.swift in Sources */,
 				037DE51A2ABBFFDE00EBB7DB /* SettingVC.swift in Sources */,
+				DBC5F4E62EE2CF6B006145E2 /* NSLayoutConstraint.swift in Sources */,
+				DBC5F4E82EE2D042006145E2 /* UsesAutoLayout.swift in Sources */,
 				DB476D982EE1A53700BF78EE /* MainTabBarVC.swift in Sources */,
 				037DE5152ABBFF7600EBB7DB /* AppDelegate.swift in Sources */,
+				DBC5F4E02EE2CCE7006145E2 /* UIViewController.swift in Sources */,
 				037DE51F2ABC001300EBB7DB /* Symbol.swift in Sources */,
 				037DE51E2ABC001300EBB7DB /* SortOrder.swift in Sources */,
+				DBC5F4DD2EE2C971006145E2 /* SettingsView.swift in Sources */,
 				DB476D9A2EE1A73100BF78EE /* BrowseSymbolsView.swift in Sources */,
 				037DE5142ABBFF7600EBB7DB /* SceneDelegate.swift in Sources */,
 			);
@@ -224,14 +248,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		037DE4FF2ABBFE7D00EBB7DB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				037DE5002ABBFE7D00EBB7DB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		037DE5042ABBFE7E00EBB7DB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -15,7 +15,7 @@ class MainTabBarVC: UITabBarController {
         browserSymbolsVC.tabBarItem = UITabBarItem(title: "Browse", image: UIImage(systemName: "eye.fill"), selectedImage: nil)
         let browserSymbolsNC = UINavigationController(rootViewController: browserSymbolsVC)
 
-        let settingsVC = UIViewController()
+        let settingsVC = SettingVC()
         settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear.circle.fill"), selectedImage: nil)
 
         viewControllers = [browserSymbolsNC, settingsVC]

@@ -3,30 +3,27 @@
 import UIKit
 
 class SymbolCell: UITableViewCell {
+    @UsesAutoLayout
     private var nameLabel: UILabel = {
         let nameLabel = UILabel()
         nameLabel.adjustsFontSizeToFitWidth = true
         nameLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
         return nameLabel
     }()
 
+    @UsesAutoLayout
     private var categoryLabel: UILabel = {
         let categoryLabel = UILabel()
         categoryLabel.font = UIFont.systemFont(ofSize: 15.0)
         categoryLabel.textColor = .secondaryLabel
-        categoryLabel.translatesAutoresizingMaskIntoConstraints = false
         return categoryLabel
     }()
 
-    private var representationImageView: UIImageView = {
-        let representationImageView = UIImageView()
-        representationImageView.translatesAutoresizingMaskIntoConstraints = false
-        return representationImageView
-    }()
+    @UsesAutoLayout
+    private var representationImageView = UIImageView()
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        NSCoder.fatalErrorNotImplemented()
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -37,19 +34,19 @@ class SymbolCell: UITableViewCell {
             addSubview($0)
         }
 
-        nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8.0).isActive = true
-        nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.0).isActive = true
-        nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8.0).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: Layout.standardSpacing).activate()
+        nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Layout.standardSpacing).activate()
+        nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Layout.standardSpacing).activate()
 
-        categoryLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8.0).isActive = true
-        categoryLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.0).isActive = true
-        categoryLabel.trailingAnchor.constraint(equalTo: representationImageView.leadingAnchor, constant: -8.0).isActive = true
+        categoryLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: Layout.standardSpacing).activate()
+        categoryLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Layout.standardSpacing).activate()
+        categoryLabel.trailingAnchor.constraint(equalTo: representationImageView.leadingAnchor, constant: -Layout.standardSpacing).activate()
 
-        representationImageView.topAnchor.constraint(equalTo: topAnchor, constant: 8.0).isActive = true
-        representationImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8.0).isActive = true
+        representationImageView.topAnchor.constraint(equalTo: topAnchor, constant: Layout.standardSpacing).activate()
+        representationImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Layout.standardSpacing).activate()
         let representationImageWidth: CGFloat = 104
-        representationImageView.heightAnchor.constraint(equalToConstant: representationImageWidth).isActive = true
-        representationImageView.widthAnchor.constraint(equalToConstant: representationImageWidth).isActive = true
+        representationImageView.heightAnchor.constraint(equalToConstant: representationImageWidth).activate()
+        representationImageView.widthAnchor.constraint(equalToConstant: representationImageWidth).activate()
     }
 
     func configure(symbol: Symbol) {

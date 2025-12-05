@@ -10,15 +10,15 @@ import UIKit
 class BrowseSymbolsView: UIView {
     static let rowHeight: CGFloat = 120.0
 
+    @UsesAutoLayout
     private(set) var tableView: UITableView = {
         let tableView = UITableView()
         tableView.rowHeight = BrowseSymbolsView.rowHeight
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        NSCoder.fatalErrorNotImplemented()
     }
 
     override init(frame: CGRect) {
@@ -27,10 +27,10 @@ class BrowseSymbolsView: UIView {
 
         addSubview(tableView)
 
-        tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 8.0).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -8.0).isActive = true
+        tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Layout.standardSpacing).activate()
+        tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).activate()
+        tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).activate()
+        tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -Layout.standardSpacing).activate()
     }
 
     func setupTable(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {

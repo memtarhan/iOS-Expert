@@ -9,12 +9,12 @@ class BrowseSymbolsVC: UIViewController {
             return castedView
 
         } else {
-            fatalError("Could not cast \(self).view to \(BrowseSymbolsView.self).")
+            fatalError(fatalCastMessage(view: BrowseSymbolsView.self))
         }
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        NSCoder.fatalErrorNotImplemented()
     }
 
     init() {
@@ -60,6 +60,8 @@ extension BrowseSymbolsVC: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO:
+        tableView.deselectRow(at: indexPath, animated: false)
+        let symbolDetailVC = SymbolDetailVC(symbol: symbols[indexPath.row])
+        navigationController?.pushViewController(symbolDetailVC, animated: true)
     }
 }

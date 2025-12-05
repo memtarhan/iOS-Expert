@@ -3,18 +3,32 @@
 import UIKit
 
 class SymbolDetailVC: UIViewController {
-  @IBOutlet weak var nameLabel: UILabel!
-  @IBOutlet weak var representationImageView: UIImageView!
-  @IBOutlet weak var categoryLabel: UILabel!
-  var symbol: Symbol?
+    private let symbol: Symbol
 
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    guard let symbol = symbol else {
-      return
+    private var symbolDetailView: SymbolDetailView {
+        if let castedView = view as? SymbolDetailView {
+            return castedView
+
+        } else {
+            fatalError(fatalCastMessage(view: SymbolDetailView.self))
+        }
     }
-    nameLabel.text = symbol.name
-    representationImageView.image = UIImage(systemName: symbol.name)
-    categoryLabel.text = "Category: \(symbol.category)"
-  }
+
+    required init?(coder: NSCoder) {
+        NSCoder.fatalErrorNotImplemented()
+    }
+
+    init(symbol: Symbol) {
+        self.symbol = symbol
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    override func loadView() {
+        view = SymbolDetailView(frame: UIScreen.main.bounds)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        symbolDetailView.configure(symbol: symbol)
+    }
 }
