@@ -14,14 +14,11 @@ struct Cardify: ViewModifier {
         ZStack {
             let base = RoundedRectangle(cornerRadius: Constants.cornerRadius)
 
-            Group {
-                base
-                    .foregroundStyle(Color.white)
-                base
-                    .strokeBorder(lineWidth: Constants.lineWidth)
-                content
-            }
-            .opacity(isFaceUp ? 1 : 0)
+            base
+                .strokeBorder(lineWidth: Constants.lineWidth)
+                .background(base.fill(.white))
+                .overlay(content)
+                .opacity(isFaceUp ? 1 : 0)
 
             base
                 .fill()
@@ -32,5 +29,11 @@ struct Cardify: ViewModifier {
     private struct Constants {
         static let cornerRadius: CGFloat = 12
         static let lineWidth: CGFloat = 2
+    }
+}
+
+extension View {
+    func cardify(isFaceUp: Bool) -> some View {
+        modifier(Cardify(isFaceUp: isFaceUp))
     }
 }

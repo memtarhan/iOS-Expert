@@ -25,6 +25,7 @@ struct CardView: View {
             static let smallest: CGFloat = 10
             static let scaleFactor = smallest / largest
         }
+
         struct Pie {
             static let opacity: CGFloat = 0.5
             static let inset: CGFloat = 8
@@ -43,8 +44,8 @@ struct CardView: View {
                     .padding(Constants.Pie.inset)
             )
             .padding(Constants.inset)
-            .modifier(Cardify(isFaceUp: true))
-        .opacity(card.isFaceUp || !card.isMatched ? 1 : 0)
+            .cardify(isFaceUp: card.isFaceUp)
+            .opacity(card.isFaceUp || !card.isMatched ? 1 : 0)
     }
 }
 
