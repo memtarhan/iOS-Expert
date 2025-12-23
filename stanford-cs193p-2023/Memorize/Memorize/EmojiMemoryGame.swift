@@ -9,9 +9,11 @@ import SwiftUI
 
 class EmojiMemoryGame: ObservableObject {
     private static let emojis = ["👻", "🕷️", "🐥", "🐝", "🐒", "🦆", "🐞", "🦉", "🐸", "🐔", "🦋", "🦜"]
+    
+    var color: Color = .indigo
 
     private static func createMemoryGame() -> MemoryGame<String> {
-        MemoryGame(numberOfPairsOfCards: emojis.count) { pairIndex in
+        MemoryGame(numberOfPairsOfCards: 2) { pairIndex in
             if emojis.indices.contains(pairIndex) {
                 return emojis[pairIndex]
                 
